@@ -5,22 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
-  <style>
-    .abc {color: red;}
-  </style>
+
 </head>
 
 <body>
 
-  <p id="main">클래스네임</p>
-  
-  <script>
-    
-    const n_st=document.getElementById("main");
-    n_st.className="abc";
-    console.log(n_st);
+  <h2>3의 배수 찾기</h2>
 
+  <script>
+
+    let count=0;
+    for(let i=1; i<=100; i++){
+      if(i % 3 == 0) {
+        count++;
+      }
+      
+    }
+
+    document.write("<p>3의 배수의 갯수 : "+count+"</p>");
+
+      
   </script>
 
 </body>

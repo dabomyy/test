@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <div id="contents">
+    <img src="img/main.jpg">
+    <ul>
+      <li>
+        <label for="number">수량을 입력하세요?</label>
+        <input type="text" id="number">개
+      </li>
+      <li>
+        <label for="price">단가를 입력하세요?</label>
+        <input type="text" id="price">원
+      </li>
+      <li>
+        <button onclick="showPrice()">가격 계산하기</button>
+      </li>
+    </ul>
+    <div id="result"></div>
+  </div>
+
+  <script>
+
+    function showPrice() {
+      const number=document.querySelector('#number').value;
+      const price=document.querySelector('#price').value;
+      const result=number*price  //number(number)* number(price) 숫자로 바꿔주기
+      document.querySelector('#result').innerHTML=
+      "수량은 " +number+ "개, 단가는 " +price.toLocaleString()+
+      "원, " + "금액은 " +result.toLocaleString()+ "원 입니다.";
+    }
+
+      
+  </script>
+
+</body>
+</html>

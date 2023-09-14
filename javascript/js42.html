@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
-  <style>
-    .abc {color: red;}
-  </style>
+
 </head>
 
 <body>
 
-  <p id="main">클래스네임</p>
-  
   <script>
-    
-    const n_st=document.getElementById("main");
-    n_st.className="abc";
-    console.log(n_st);
+
+    let output ="";
+    for(let i=5; i>=1; i--){ // i=행 j=열
+      for (let j=5; j>=(6-i); j--){
+        output += "*"; //문자의 나열이기 때문에 +=
+      }
+        output += "\n"; // \ = <br>
+    }
+    alert(output);
 
   </script>
 

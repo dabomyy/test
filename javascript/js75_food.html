@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript</title>
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+
+
+<body>
+<!--배열은 form,radio에서 주로 쓰임-->
+  
+  <p>음식을 선택하세요</p>
+  <div class="box1">
+    <input type="radio" name="rice" value="3000">보리밥(3000원)
+    <input type="radio" name="rice" value="5000">비빔밥(5000원)
+    <input type="radio" name="rice" value="1000">흰쌀밥(1000원)
+  </div>
+
+  <div class="box2">
+    <input type="radio" name="meat" value="3000">소고기(3000원)
+    <input type="radio" name="meat" value="5000">돼지고기(5000원)
+    <input type="radio" name="meat" value="1000">닭고기(1000원)
+    <input type="radio" name="meat" value="2000">오리고기(2000원)
+  </div>
+
+  <div class="box3">
+    <input type="radio" name="soup" value="1500">미역국(1500원)
+    <input type="radio" name="soup" value="1000">된장국(1000원)
+  </div>
+
+  <div class="btn">
+    <input type="button" name="" value="계산" onclick="foodPrice()">
+    총계<input type="text" name="" value="" id="totalPrice" size="12">
+  </div>
+
+ <script>
+   
+  function foodPrice(){
+    const rice=document.getElementsByName("rice");
+    const meat=document.getElementsByName("meat");
+    const soup=document.getElementsByName("soup");
+    const totalPrice=check(rice)+check(meat)+check(soup);
+    document.getElementById("totalPrice").value=totalPrice.toLocaleString()+"원";
+  }
+
+  function check(arr){
+    for(let i=0; i<arr.length; i++){
+      if(arr[i].checked == true){
+        return Number (arr[i].value);
+      }
+    }
+  }
+
+  </script>
+</body>
+</html>

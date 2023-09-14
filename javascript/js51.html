@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <img src="img/main.jpg" name="topimage"><form name="myform">
+
+    <input type="button" name="butt1" value="이미지 바꾸기1"
+    onmouseover="changeToPic2();" onmouseout="changeToPic4();">
+    <input type="button" name="butt1" value="이미지 바꾸기2"
+    onmouseover="changeToPic3();" onmouseout="changeToPic4();">
+  </form>
+
+  <script>
+
+    function changeToPic2(){
+      document.topimage.src="img/first.png";
+    }
+    function changeToPic3(){
+      document.topimage.src="img/second.png";
+    }
+    function changeToPic4(){
+      document.topimage.src="img/main.jpg";
+    }
+
+
+
+  </script>
+
+</body>
+</html>
