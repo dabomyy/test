@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>html5문서</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+
+<style>
+	#myList li {display: none;}
+	#loadMore {color: green; cursor: pointer;}
+	#loadMore:hover {color: black;}
+</style>
+
+ <script>
+	$(function(){
+
+		size_li = $("#myList li").size(); //size: 개수 구하는 함수
+		x=3;
+		$("#myList li:lt("+x+")").show(); 
+		//lt(3): 3보다 작은 =0,1,2(one,two,three) <->gt()
+		$("#loadMore").click(function(){
+			x= (x+5 <= size_li) ? x+5 : size_li;
+		//x=8 이면 참->x+5 화면에 나타함
+		//x=13 이면 거짓-> size_li(모두) 나타남
+			$("#myList li:lt("+x+")").show();
+		});
+	});
+ </script>
+</head>
+
+<body>
+	<ul id="myList">
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+		<li>six</li>
+		<li>seven</li>
+		<li>eight</li>
+		<li>nine</li>
+		<li>ten</li>
+		<li>eleven</li>
+	</ul>
+	<div id="loadMore">Load more</div>
+</body>
+</html>
+
+
