@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+<script>//나이 내림차순
+    $(function(){
+      const student = [
+        {name: 'Andrew', age:21},
+        {name: 'Leo', age:25},
+        {name: 'Gabriel', age:19},
+        {name: 'Amy', age:20},
+        {name: 'David', age:26},
+        {name: 'Bryan', age:19}
+      ];
+      student.sort(function(a,b){
+        return a.age > b.age ? -1:a.age < b.age ? 1:0;
+      }); //음수:유지 양수:교체 0:그대로
+      for(let i in student){
+        document.write(student[i].name+'\t'+student[i].age+'<br>');
+      };
+    });
+</script>
+</head>
+
+<body>
+  
+
+
+</body>
+</html>
