@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+*,*:after,*:before {box-sizing:border-box;}
+
+.main {
+	position: relative; width: 90%;
+	margin-left: auto; margin-right: auto;}
+.main button {
+	position: absolute; top: 50%; z-index: 999;
+	width: 35px; height: 35px; border-radius: 100%; 
+	border: none; outline: none;
+	background: rgba(0, 0, 0, 0.4); 
+	transform: translateY(-50%); /*수직 가운데 정렬*/
+}
+.main button:before {
+	font-family: "xeicon"; 
+	color: #fff; 
+	font-size: 20px;
+}
+.main button.slick-prev {
+	left: 50px; font-size: 0; 
+	color: transparent;
+}
+.main button.slick-prev:before {
+	content: "\e93d";
+}
+.main button.slick-next {
+	right: 50px; font-size: 0; 
+	color: transparent;
+}
+.main button.slick-next:before {
+	content: "\e940";
+}
+.main div.slick-slide img {width: 100%;}
+.main div.slick-slide img {width: 100%;}
