@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+
+body {
+  background: rgb(235,235,236);
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  background: #000;
+  height: 75px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.7rem;
+  letter-spacing: 0.4rem;
+  line-height: 75px;
+  color: #fff;
+}
+#box {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+#box div {
+  float: left;
+}
+#box div:nth-child(1) {
+  width: 20%;
+}
+#box div a {
+  display: block;
+  padding: 20px 0;
+  width: 100%;
+}
+#button {
+  text-align: center;
+  width: 80%;
+}
+#button li {
+  float: left;
+  padding: 20px 0;
+  cursor: pointer;
+  width: 20%;
+}
+.active {
+  color: red;
+}
+
+#converse {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#converse img {
+  width: 250px;
+  height: 250px;
+  border-radius: 3px;
+  border: 8px solid #fff;
+  margin: 6px;
+  float: left;
+}
+
+
