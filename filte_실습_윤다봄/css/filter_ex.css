@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+
+body {
+  background: rgb(235,235,236);
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  background: #000;
+  height: 75px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.7rem;
+  letter-spacing: 0.4rem;
+  line-height: 75px;
+  color: #fff;
+}
+#search {
+  text-align: center;
+  margin: 2rem 0 1rem; 
+}
+input {
+  text-align: center;
+  font-size: 120%;
+  border: 1px solid #999;
+  padding: 5px;
+  border-radius: 10px;
+}
+input:hover {
+  border: 2px solid #6a6464;
+}
+input:focus {
+  border: 2px solid #00cccc;
+  outline: none;
+}
+
+#converse {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#converse img {
+  width: 250px;
+  height: 250px;
+  border-radius: 3px;
+  border: 8px solid #fff;
+  margin: 6px;
+  float: left;
+}
+
+
